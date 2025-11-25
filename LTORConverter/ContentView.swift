@@ -28,8 +28,26 @@ struct ContentView: View {
                 HStack{
                     VStack{
                         HStack{
+                            Image(.silverpiece)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 33)
+                            
+                            Text("Silver Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
                             
                         }
+                        
+                        Text("text field")
+                    }
+                    
+                    Image(systemName: "equal")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                    
+                    VStack{
+                        
                     }
                     
                     VStack{
