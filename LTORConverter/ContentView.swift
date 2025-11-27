@@ -45,6 +45,7 @@ struct ContentView: View {
                     Image(systemName: "equal")
                         .font(.largeTitle)
                         .foregroundStyle(.white)
+                        .symbolEffect(.pulse)
                     
                     VStack{
                         
@@ -52,12 +53,23 @@ struct ContentView: View {
                     
                     VStack{
                         HStack{
+                            Text("Gold Piece")
+                                .font(.headline)
+                                .foregroundStyle(.white)
                             
+                            Image(.goldpiece)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height:33)
                         }
+                        Text("Text field")
                     }
-
-                    
                 }
+                
+                Spacer()
+                Image(systemName: "info.circle.fill")
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
             }
         }
     }
