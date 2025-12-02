@@ -1,4 +1,4 @@
-# 🍏 Repositório de Projetos: iOS 18 com Swift 6 e SwiftUI 6
+# 🍏 Repositório de Projetos: SwiftUI 
 
 Este repositório é dedicado à demonstração e ao aprendizado das tecnologias de desenvolvimento nativo da Apple. Contém o código-fonte e projetos de exemplo focados na construção de aplicações modernas e de alta performance para o ecossistema Apple.
 
