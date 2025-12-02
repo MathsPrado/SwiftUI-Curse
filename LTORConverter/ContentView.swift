@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var showExchangeInfo = false; //let its like a const
     var body: some View {
         ZStack{
             Image(.background)
@@ -68,7 +70,7 @@ struct ContentView: View {
                 
                 Spacer()
                 Button {
-                    
+                    showExchangeInfo = false;
                 }label:{
                     Image(systemName: "info.circle.fill")
                         .font(.largeTitle)
