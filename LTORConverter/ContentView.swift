@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showExchangeInfo = false; //let its like a const
+    @State var  leftAmount = "";
+    @State var  rightAmount = "";
     var body: some View {
         ZStack{
             Image(.background)
@@ -41,7 +43,8 @@ struct ContentView: View {
                             
                         }
                         
-                        Text("text field")
+                        TextField("Amount", text: $leftAmount)
+                            .textFieldStyle(.roundedBorder)
                     }
                     
                     Image(systemName: "equal")
@@ -64,20 +67,26 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(height:33)
                         }
-                        Text("Text field")
+                        TextField("Amount", text: $rightAmount)
+                            .textFieldStyle(.roundedBorder)
                     }
                 }
                 
                 Spacer()
-                Button {
-                    showExchangeInfo = false;
-                }label:{
-                    Image(systemName: "info.circle.fill")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
+                HStack {
+                    Spacer()
+                    Button {
+                        showExchangeInfo.toggle()
+                    }label:{
+                        Image(systemName: "info.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(.white)
+                    }
+                    .padding(.trailing)
                 }
 
-            }
+            }.border(.blue)
+            
         }
     }
 }
