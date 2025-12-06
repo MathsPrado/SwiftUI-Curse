@@ -1,0 +1,44 @@
+# Arquivos de Sistema macOS
+.DS_Store
+
+# Diretório de Build e Dados Derivados (Xcode)
+# Contém arquivos intermediários e resultados de build.
+DerivedData/
+
+# Informações de Usuário do Xcode
+# Contém dados específicos do usuário (esquemas, breakpoints, etc.)
+*.xcuserdatad/
+xcuserdata/
+
+# Arquivos de Workspace
+# O Package.xcworkspace deve ser ignorado a menos que você use Pods ou packages do Swift
+# (e mesmo assim, muitos optam por ignorá-lo).
+# O padrão para projetos SwiftUI modernos (com Swift Packages) é ignorar.
+*.xcworkspace
+!default.xcworkspace
+# Exceção para o xcshareddata, se o projeto usar esquemas compartilhados, etc.
+!*/xcschemes/
+
+# Build do Swift Package Manager
+# O diretório .build é gerado ao usar Swift Package Manager.
+.build/
+Package.resolved
+
+# Cache e Arquivos Temporários de Playgrounds
+*.playground/
+playground.xcworkspace
+
+# Dependências (se aplicável)
+# Descomente conforme necessário, mas o padrão para Pods é **não** ignorar o diretório Pods.
+#
+# CocoaPods
+# Pods/
+#
+# Carthage
+# Carthage/Build/
+
+# Outros arquivos gerados
+#
+# Códigos de cobertura de testes (Test Coverage)
+*.profdata
+*.coverage
