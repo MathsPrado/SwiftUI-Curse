@@ -1,87 +1,96 @@
-//
-//  ContentView.swift
-//  LTORConverter
-//
-//  Created by Matheus Prado on 21/11/25.
-//
+    //
+    //  ContentView.swift
+    //  LTORConverter
+    //
+    //  Created by Matheus Prado on 21/11/25.
+    //
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
-    
-    @State var showExchangeInfo = false; //let its like a const
-    var body: some View {
-        ZStack{
-            Image(.background)
-                .resizable()
-                .ignoresSafeArea()
-            
-            VStack{
-                
-                Image(.prancingpony)
+    struct ContentView: View {
+        
+        @State var showExchangeInfo = false; //let its like a const
+        @State var  leftAmount = "";
+        @State var  rightAmount = "";
+        var body: some View {
+            ZStack{
+                Image(.background)
                     .resizable()
-                    .scaledToFit()
-                    .frame(height: 200)
+                    .ignoresSafeArea()
                 
-                    Text("Current Exchange")
-                    .font(.largeTitle)
-                    .foregroundStyle(.white)
-                
-                HStack{
-                    VStack{
-                        HStack{
-                            Image(.silverpiece)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 33)
+                VStack{
+                    
+                    Image(.prancingpony)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 200)
+                    
+                        Text("Current Exchange")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
+                    
+                    HStack{
+                        VStack{
+                            HStack{
+                                Image(.silverpiece)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 33)
+                                
+                                Text("Silver Piece")
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                
+                            }
                             
-                            Text("Silver Piece")
-                                .font(.headline)
-                                .foregroundStyle(.white)
+                            TextField("Amount", text: $leftAmount)
+                                .textFieldStyle(.roundedBorder)
+                        }
+                        
+                        Image(systemName: "equal")
+                            .font(.largeTitle)
+                            .foregroundStyle(.white)
+                            .symbolEffect(.pulse)
+                        
+                        VStack{
                             
                         }
                         
-                        Text("text field")
-                    }
-                    
-                    Image(systemName: "equal")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
-                        .symbolEffect(.pulse)
-                    
-                    VStack{
-                        
-                    }
-                    
-                    VStack{
-                        HStack{
-                            Text("Gold Piece")
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                            
-                            Image(.goldpiece)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height:33)
+                        VStack{
+                            HStack{
+                                Text("Gold Piece")
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                
+                                Image(.goldpiece)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height:33)
+                            }
+                            TextField("Amount", text: $rightAmount)
+                                .textFieldStyle(.roundedBorder)
                         }
-                        Text("Text field")
                     }
-                }
-                
-                Spacer()
-                Button {
-                    showExchangeInfo = false;
-                }label:{
-                    Image(systemName: "info.circle.fill")
-                        .font(.largeTitle)
-                        .foregroundStyle(.white)
-                }
+                    
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            showExchangeInfo.toggle()
+                        }label:{
+                            Image(systemName: "info.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundStyle(.white)
+                        }
+                        .padding(.trailing)
+                    }
 
+                }.border(.blue)
+                
             }
         }
     }
-}
 
-#Preview {
-    ContentView()
-}
+    #Preview {
+        ContentView()
+    }
