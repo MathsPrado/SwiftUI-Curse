@@ -42,6 +42,7 @@
                                     .foregroundStyle(.white)
                                 
                             }
+                            .padding(.bottom, -5)
                             
                             TextField("Amount", text: $leftAmount)
                                 .textFieldStyle(.roundedBorder)
@@ -67,11 +68,15 @@
                                     .scaledToFit()
                                     .frame(height:33)
                             }
+                            
+                            .padding(.bottom, -5)
                             TextField("Amount", text: $rightAmount)
                                 .textFieldStyle(.roundedBorder)
                         }
                     }
-                    
+                    .padding()
+                    .background(.black.opacity(0.5))
+                    .clipShape(.capsule)
                     Spacer()
                     HStack {
                         Spacer()
