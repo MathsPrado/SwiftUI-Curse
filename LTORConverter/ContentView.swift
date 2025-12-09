@@ -89,9 +89,11 @@
                         }
                         .padding(.trailing)
                     }
-
-                }.border(.blue)
-                
+                }
+                .sheet(isPresented: $showExchangeInfo)
+                {
+                    ExchangeInfo()
+                }
             }
         }
     }
