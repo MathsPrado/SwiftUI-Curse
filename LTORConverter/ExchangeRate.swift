@@ -12,7 +12,6 @@ struct ExchangeRate: View {
     let RightImage: ImageResource
     let messagetext: String
     
-    
     var body: some View {
         HStack{
             Image(leftImage)
